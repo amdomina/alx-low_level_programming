@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* main - the programe begin here
+* main - the program is begin here
 *
 * Return: return 0 (success)
 */
@@ -8,18 +8,23 @@ int main(void)
 {
 	int i, j;
 
-	for (i = 0; i < 100; i++)
+	for (i = 0; i <= 99; i++)
 	{
-		for (j = i; i < 100; j++)
+		for (j = i; j <= 99; j++)
 		{
-			putchar(i / 10 + '0');
-			putchar(i % 10 + '0');
+			int tens1 = i / 10;
+			int ones1 = i % 10;
+			int tens2 = j / 10;
+			int ones2 = j % 10;
+
+			putchar(tens1 + '0');
+			putchar(ones1 + '0');
 			putchar(' ');
-			putchar(j / 10 + '0');
-			putchar(j % 10 + '0');
-			if (i != 99 && j != 99)
+			putchar(tens2 + '0');
+			putchar(ones2 + '0');
+			putchar(',');
+			if (i != 99 || j != 99)
 			{
-				putchar(',');
 				putchar(' ');
 			}
 		}
