@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 /**
 * main - entry point
@@ -10,29 +11,29 @@ int main(void)
 
 	for (n = 0; n < 10; n++)
 	{
-		putchar(n + 48); /* Print the first digit */
-		if (n != 9) /* Print the comma and space separator */
+		putchar(n + 48);
+		if (n != 9)
 		{
 			putchar(44);
 			putchar(32);
 		}
-		if (n < 9) /* Print the second digit */
+		if (n < 9)
 		{
 			putchar(n + 49);
-			if (n != 8) /* Print the comma and space separator */
+			if (n != 8)
 			{
 				putchar(44);
 				putchar(32);
 			}
-			if (n < 8) /* Print the third digit */
+			if (n < 8)
 			{
 				putchar(n + 50);
-				if (n != 7) /* Print the comma and space separator */
+				if (n != 7)
 				{
 					putchar(44);
 					putchar(32);
 				}
-				if (n < 7) /* Print the fourth digit */
+				if (n < 7)
 				{
 					putchar(n + 51);
 					putchar(44);
@@ -40,7 +41,6 @@ int main(void)
 				}
 			}
 		}
-		putchar("\n", n);
 	}
 	return (0);
 }
