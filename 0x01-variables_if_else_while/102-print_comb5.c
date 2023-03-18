@@ -23,6 +23,7 @@ int main(void)
 				putchar(' ');
 			}
 		}
+putchar("%d", i, j);
 	}
 	return (0);
 }
