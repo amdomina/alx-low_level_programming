@@ -14,6 +14,6 @@ int main(void)
 	{
 		printf("%d", i);
 	}
-	printf("%d");
+	printf("\n");
 	return (0);
 }
