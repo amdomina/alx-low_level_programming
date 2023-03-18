@@ -1,46 +1,24 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 /**
-* main - entry point
+* main - Entry point.
 *
-* Return: Always 0 (Success)
+* Return: Always 0.
 */
 int main(void)
 {
-	int n;
+int i;
 
-	for (n = 0; n < 10; n++)
-	{
-		putchar(n + 48);
-		if (n != 9)
-		{
-			putchar(44);
-			putchar(32);
-		}
-		if (n < 9)
-		{
-			putchar(n + 49);
-			if (n != 8)
-			{
-				putchar(44);
-				putchar(32);
-			}
-			if (n < 8)
-			{
-				putchar(n + 50);
-				if (n != 7)
-				{
-					putchar(44);
-					putchar(32);
-				}
-				if (n < 7)
-				{
-					putchar(n + 51);
-					putchar(44);
-					putchar(32);
-				}
-			}
-		}
-	}
-	return (0);
+for (i = 0; i < 10; i++)
+{
+putchar(i + '0');
+if (i != 9)
+{
+putchar(',');
+putchar(' ');
+}
+}
+putchar('\n');
+return (0);
 }
