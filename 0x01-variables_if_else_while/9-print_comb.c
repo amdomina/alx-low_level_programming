@@ -1,43 +1,45 @@
 #include <stdio.h>
 /**
-* main - main function start here
+* main - entry point
 *
-* Return: return 0 (success)
+* Return: Always 0 (Success)
 */
 int main(void)
 {
-	int i, j, k, l;
+	int n;
 
-	for (i = 0; i < 10; i++)
+	for (n = 0; n < 10; n++)
 	{
-		putchar(i + '0');
-		putchar(',');
-		putchar(' ');
-		for (j = i + 1; j < 10; j++)
+		putchar(n + 48); /* Print the first digit */
+		if (n != 9) /* Print the comma and space separator */
 		{
-			putchar(i + '0');
-			putchar(j + '0');
-			putchar(',');
-			putchar(' ');
-			for (k = j + 1; k < 10; k++)
+			putchar(44);
+			putchar(32);
+		}
+		if (n < 9) /* Print the second digit */
+		{
+			putchar(n + 49);
+			if (n != 8) /* Print the comma and space separator */
 			{
-				putchar(i + '0');
-				putchar(j + '0');
-				putchar(k + '0');
-				putchar(',');
-				putchar(' ');
-				for (l = k + 1; l < 10; l++)
+				putchar(44);
+				putchar(32);
+			}
+			if (n < 8) /* Print the third digit */
+			{
+				putchar(n + 50);
+				if (n != 7) /* Print the comma and space separator */
 				{
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(k + '0');
-					putchar(l + '0');
-					putchar(',');
-					putchar(' ');
+					putchar(44);
+					putchar(32);
+				}
+				if (n < 7) /* Print the fourth digit */
+				{
+					putchar(n + 51);
+					putchar(44);
+					putchar(32);
 				}
 			}
 		}
 	}
-	putchar('\n');
 	return (0);
 }
