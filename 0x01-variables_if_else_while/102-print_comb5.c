@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 /**
 * main - the program is begin here
