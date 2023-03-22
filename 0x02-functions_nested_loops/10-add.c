@@ -1,4 +1,5 @@
 #include "main.c"
+#include <stdio.h>
 
 /**
 * add - add two values
